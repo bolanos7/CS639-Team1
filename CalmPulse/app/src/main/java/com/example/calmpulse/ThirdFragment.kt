@@ -7,36 +7,28 @@ import android.view.View
 import android.view.ViewGroup
 import android.graphics.Color
 import androidx.navigation.fragment.findNavController
-import com.example.calmpulse.databinding.FragmentSecondBinding
+import com.example.calmpulse.databinding.FragmentThirdBinding
 
-/**
- * A simple [Fragment] subclass as the second destination in the navigation.
- */
-class SecondFragment : Fragment() {
+class ThirdFragment : Fragment() {
 
-    private var _binding: FragmentSecondBinding? = null
-
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    private var _binding: FragmentThirdBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
-        _binding = FragmentSecondBinding.inflate(inflater, container, false)
+        _binding = FragmentThirdBinding.inflate(inflater, container, false)
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         view.setBackgroundColor(Color.parseColor("#D8EB61"))
-        
-        binding.buttonSecond.setOnClickListener {
-            findNavController().navigate(R.id.action_SecondFragment_to_ThirdFragment)
+
+        binding.buttonThird.setOnClickListener {
+            findNavController().navigate(R.id.action_ThirdFragment_to_SecondFragment)
         }
     }
 

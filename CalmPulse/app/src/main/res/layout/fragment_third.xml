@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#D8EB61"
-    tools:context=".SecondFragment">
+    tools:context=".ThirdFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -14,10 +14,10 @@
         android:padding="16dp">
 
         <ImageView
-            android:id="@+id/imageview_second"
+            android:id="@+id/imageview_third"
             android:layout_width="305.51dp"
             android:layout_height="300dp"
-            android:src="@drawable/image_2"
+            android:src="@drawable/image_3"
             android:layout_marginTop="100dp"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -28,15 +28,15 @@
             android:id="@+id/stepper_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/stepper_2"
+            android:src="@drawable/stepper_3"
             android:layout_marginTop="8dp"
-            app:layout_constraintTop_toBottomOf="@id/imageview_second"
+            app:layout_constraintTop_toBottomOf="@id/imageview_third"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/textview_second" />
+            app:layout_constraintBottom_toTopOf="@id/textview_third" />
 
         <TextView
-            android:id="@+id/textview_second"
+            android:id="@+id/textview_third"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -46,10 +46,10 @@
             app:layout_constraintTop_toBottomOf="@id/stepper_image"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toTopOf="@id/button_second" />
+            app:layout_constraintBottom_toTopOf="@id/button_third" />
 
         <Button
-            android:id="@+id/button_second"
+            android:id="@+id/button_third"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/next"
@@ -57,7 +57,7 @@
             android:backgroundTint="#FFFFFF"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="50dp"
-            app:layout_constraintTop_toBottomOf="@id/textview_second"
+            app:layout_constraintTop_toBottomOf="@id/textview_third"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 

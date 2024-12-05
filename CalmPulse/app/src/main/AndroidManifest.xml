@@ -15,7 +15,9 @@
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.CalmPulse">
+            android:theme="@style/Theme.CalmPulse"
+            android:screenOrientation="portrait"
+            android:resizeableActivity="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

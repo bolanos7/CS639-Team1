@@ -1,7 +1,6 @@
 package com.example.calmpulse
 
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
@@ -19,20 +18,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        // Set fixed window size
+        val width = 412  // width in dp
+        val height = 915 // height in dp
+        
+        val metrics = resources.displayMetrics
+        val widthInPixels = (width * metrics.density).toInt()
+        val heightInPixels = (height * metrics.density).toInt()
+        
+        window.setLayout(widthInPixels, heightInPixels)
+        window.setBackgroundDrawableResource(android.R.color.transparent)
+
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
+        supportActionBar?.hide()
 
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null)
-                .setAnchorView(R.id.fab).show()
-        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

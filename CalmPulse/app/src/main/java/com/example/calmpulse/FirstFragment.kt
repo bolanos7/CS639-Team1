@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.calmpulse.databinding.FragmentFirstBinding
+import android.graphics.Color
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -31,7 +32,9 @@ class FirstFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        
+        view.setBackgroundColor(Color.parseColor("#D8EB61"))
+        
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
         }
