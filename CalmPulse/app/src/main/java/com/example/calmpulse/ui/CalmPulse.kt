@@ -22,7 +22,7 @@ fun CalmPulse(context: Context) {
         topBar = {
             CommonToolbar(
                 navController = navController,
-                title = "Your App Title",
+                title = "Calm Pulse  ",
                 toolbarColor = LightGreen
             )
         }
